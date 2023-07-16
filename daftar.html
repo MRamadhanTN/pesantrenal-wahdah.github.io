@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/pondok.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fomulir Pendaftaran</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="contact-info">
+        <span class="email">
+          <i class="fa fa-envelope"></i>
+          <span>contoh@gmail.com</span>
+        </span>
+        <span class="hp">
+          <i class="fa-solid fa-mobile"></i>
+          <span>089595959595</span>
+        </span>
+      </div>
+      <div class="logo">
+        <span class="fb">
+          <i class="fa-brands fa-facebook"></i>
+        </span>
+        <span class="ig">
+          <i class="fa-brands fa-instagram"></i>
+        </span>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logonav">
+        <img class="pondok" src="images/pondok.png" alt="Logo" />
+      </div>
+      <div class="navbar-right">
+        <a href="login.html">
+          <button class="rounded-button btn1">Login</button>
+        </a>
+        <a href="index.html">
+          <button class="rounded-button btn2">Home</button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container container-2">
+      <form class="login-form sig_in" action="#">
+        <h1>Fomulir Pendaftaran</h1>
+        <div class="column">
+          <label for="nama">Nama Lengkap<span> *wajib diisi</span></label>
+          <input type="text" id="nama" class="nama" placeholder="Masukan lengkap" required />
+        </div>
+        <div class="col-2">
+          <div class="column">
+            <label for="date">Tanggal Lahir<span> *wajib diisi</span></label>
+            <input type="date" id="date" class="date" required />
+          </div>
+          <div class="column">
+            <label for="family" id="family">Keluarga<span> *wajib diisi</span></label>
+            <select id="family">
+              <option value="">-- Pilihan --</option>
+              <option value="sangatmampu">Sangat Mampu</option>
+              <option value="mampu">Mampu</option>
+              <option value="kurang">Kurang Mampu</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="column">
+            <label for="pass">Password<span> *wajib diisi</span></label>
+            <span class="toggle-2">
+              <input type="password" id="password" class="nama" placeholder="Masukan password" required />
+              <button id="showHide">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </span>
+          </div>
+          <div class="column">
+            <label for="family" class="pass">Ulangi Password<span> *wajib diisi</span></label>
+            <span class="toggle-2">
+              <input type="password" id="ulang" class="nama pass" placeholder="Ulangi password" />
+              <button id="showHided">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </span>
+            </span>
+          </div>
+        </div>
+        <div class="ket">
+          <p>*Untuk wanita belum diterima</p>
+          <div class="syarat">
+            <input type="checkbox" id="gender" name="gender" value="pria">
+            <label for="gender">Laki-laki</label>
+          </div>
+        </div>
+        <div class="tombol">
+          <button type="submit" id="btn-daftar">Daftar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="first">
+      <footer class="footer">
+        <div class="footer-left">
+          <h3>Alamat</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's
+          </p>
+
+          <h3>Email</h3>
+          <p>pondokXXX@gmail.com</p>
+
+          <h3>Kontak</h3>
+          <ul>
+            <li>088 8XX XXX XXX</li>
+          </ul>
+        </div>
+
+        <div class="footer-center">
+          <img src="images/pondok.png" alt="Logo Pondok" />
+        </div>
+
+        <div class="footer-right">
+          <h3>Pesantren Al-Wahdah</h3>
+          <p class="info">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into
+          </p>
+        </div>
+      </footer>
+      <div class="foot">
+        <p class="copy">
+          &copy; 2023 Copyright <span>Pesantren Al-Wahdah.</span>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script >
+      const ulang = document.getElementById('ulang');
+      const showHided = document.getElementById('showHided');
+      ulang.type = 'password';
+      showHided.innerHTML = '<i class="fa-solid fa-eye"></i>';
+      showHided.style.cursor = 'pointer';
+      showHided.addEventListener('click', () => {
+          if (ulang.type === 'password' ) {
+              ulang.type = 'text';
+              showHided.innerHTML = '<i class="fa-sharp fa-solid fa-eye-slash"></i>';
+          } else {
+              showHided.innerHTML = '<i class="fa-solid fa-eye"></i>';
+              ulang.type = 'password';
+          }
+      });
+    </script>
+  </body>
+</html>
